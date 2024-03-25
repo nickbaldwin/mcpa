@@ -2,9 +2,9 @@
 
 ## todos
 
- - doco!
- - check manifest - need all those permissions? 
- - 
+-   doco!
+-   check manifest - need all those permissions?
+-
 
 ## What does this extension do?
 
@@ -13,7 +13,6 @@ This extension provides more information about the performance of a campaign.
 ## How does it work?
 
 // todo
-
 
 ## How does the extension work?
 
@@ -27,7 +26,7 @@ The extension is composed of four primary components:
 
     This script runs in the background, and communicates with the content scripts running on all search pages, in order to sync and correctly persist settings used across all Monster domains.
 
--   #### Popup 
+-   #### Popup
     When the extension icon is clicked, the popup is displayed in a new tab. Here a user can upload a file and the exention will parse the file and display the results.
 
 In addition, there are numerous assets and build/configuration files that are used to generate the extension. This is described in the build process section.
