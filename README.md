@@ -1,20 +1,19 @@
 # Monster Campaign Performance Analyzer
 
+## todos
+
+ - doco!
+ - check manifest - need all those permissions? 
+ - 
+
 ## What does this extension do?
 
-This extension provides more information about...
+This extension provides more information about the performance of a campaign.
 
 ## How does it work?
 
-See the [installation and usage doc](https://monster-next.atlassian.net/wiki/spaces/STCT/pages/2119926665/JSP+Installation+guide) for the current version
+// todo
 
-> // todo - update links when complete
-
-[Repo](https://github.com/monster-next/job-search-plugin)
-
-[V3 Repo](https://github.com/nickbaldwin/v3-job-search-extension)
-
-[Issues](https://trello.com/b/IqVufxSu/mv3-board)
 
 ## How does the extension work?
 
@@ -24,16 +23,12 @@ The extension is composed of four primary components:
 
     This mandatory JSON file defines the configuration, permissions and metadata for the extension.
 
--   #### Content scripts
-
-    The main content script injects the extension 'App' into the context of search results pages across all Monster domains. While it can access and modify the DOM, it operates in an isolated context which means it cannot access key data added by the Monster site (Window properties and React element info). Thus, a 'world' script is injected into the Monster web page as a script tag purely in order to pass this information to the content script.
-
 -   #### Service worker
 
     This script runs in the background, and communicates with the content scripts running on all search pages, in order to sync and correctly persist settings used across all Monster domains.
 
--   #### Popup
-    The popup page simply provides some basic information so that newbies can be directed to the documentation.
+-   #### Popup 
+    When the extension icon is clicked, the popup is displayed in a new tab. Here a user can upload a file and the exention will parse the file and display the results.
 
 In addition, there are numerous assets and build/configuration files that are used to generate the extension. This is described in the build process section.
 

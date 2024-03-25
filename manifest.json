@@ -3,23 +3,19 @@
     "name": "campaign-performance-analyzer",
     "version": "0.0.1",
     "action": {
-        "default_popup": "src/contexts/popup.html"
+        "default_title": "Click to show an alert"
     },
+    "permissions": ["scripting", "activeTab", "tabs"],
+
     "background": {
         "service_worker": "src/contexts/service-worker.ts",
         "type": "module"
     },
-    "content_scripts": [
-        {
-            "js": ["src/contexts/content.tsx"],
-            "matches": ["*://*.monster.com/*"],
-            "runAt": "document_start"
-        }
-    ],
     "web_accessible_resources": [
         {
-            "matches": ["*://*.monster.com/*"],
-            "resources": ["src/contexts/world.ts"]
+            "matches": ["https://*/*", "http://*/*"],
+            "resources": ["src/contexts/popup.html", "src/contexts/popup.tsx"]
         }
-    ]
+    ],
+    "host_permissions": ["https://*/*", "http://*/*"]
 }
